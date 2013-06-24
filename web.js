@@ -10,6 +10,11 @@ function sendHtml( response, text ){
 var app = express.createServer(express.logger());
 
 app.get('/', function(request, response) {
+  response.send('Hello world');
+});
+
+/*
+app.get('/', function(request, response) {
   var body = '<html>'+
     '<head>'+
     '<meta http-equiv="Content-Type" content="text/html; '+
@@ -23,6 +28,7 @@ app.get('/', function(request, response) {
 
 	sendHtml(response, body);
 });
+*/
 
 app.get('/test', function(request, response) {
   response.send('just a test');
